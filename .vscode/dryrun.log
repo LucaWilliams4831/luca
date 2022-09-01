@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/root/luca'
+make: Leaving directory '/root/luca'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

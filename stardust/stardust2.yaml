@@ -1,0 +1,37 @@
+revision: 1
+etcd:
+  endpoints:
+    - localhost:2379
+  timeout: 5
+
+server:
+  keepalive: 10
+  insecure: false
+  mtu: 1300
+
+crypto:
+  type: gcm
+  key: 6368616e676520746869732070617373776f726420746f206120736563726574
+
+nodes:
+  - node:
+      name: node1
+      address: 192.168.0.19
+      privateAddresses:
+        - 10.0.2.1/24
+      privateSubnets:
+        - 10.0.2.0/24
+  - node:
+      name: node2
+      address: 146.190.239.223
+      privateAddresses:
+        - 10.110.0.3/24
+      privateSubnets:
+        - 10.110.0.0/24
+  - node:
+      name: node3
+      address: 206.189.13.159
+      privateAddresses:
+        - 10.110.0.2/24
+      privateSubnets:
+        - 10.110.0.0/24
